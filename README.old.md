@@ -8,3 +8,7 @@ Projekt będzie stroną internetową z prostym formularzem, który ułatwi użyt
 
 # Realizacja
 21.06-07.07
+
+# Steps
+1. Przygotowanie środowiska pracy
+2. React, React Scroll, React Router, React Bootstrap
