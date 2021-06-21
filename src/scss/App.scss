@@ -1,3 +1,5 @@
+@import "./_variables";
+
 .App {
   text-align: center;
 }
@@ -21,7 +23,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight:$body-font-weight;
+  color: $gray;
 }
 
 .App-link {
