@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom'
 const Header = () => (
   <header>
     <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+      <ul className="d-flex flex-row">
+        <li className="p-2"><Link to='/'>Start</Link></li>
+        <li className="p-2"><Link to='/login'>Logowanie</Link></li>
+        <li className="p-2"><Link to='/register'>Rejestracja</Link></li>
       </ul>
     </nav>
   </header>
