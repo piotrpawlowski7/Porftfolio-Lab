@@ -1,10 +1,9 @@
 import React from 'react';
-import Nav from "./Nav";
 
 const Home = () => {
     return (
         <>
-        <Nav></Nav>
+  
   <div>
     <h1>Welcome to the Tornadoes Website!</h1>
   </div>
