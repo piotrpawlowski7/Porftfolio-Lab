@@ -1,4 +1,6 @@
+@import 'scss-reset/_reset.scss';
 @import "./_variables";
+@import "./_fonts";
 
 .App {
   text-align: center;
@@ -25,6 +27,7 @@
   font-size: calc(10px + 2vmin);
   font-weight:$body-font-weight;
   color: $gray;
+  font-family:$font-base;
 }
 
 .App-link {
