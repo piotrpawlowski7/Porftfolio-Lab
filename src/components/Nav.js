@@ -1,17 +1,36 @@
-import React from 'react';
-import { Link } from 'react-scroll'
+import React from "react";
+// import { Link as Link1 } from 'react-scroll';
+// import { Link as Link2 } from 'react-router-dom';
+import { NavHashLink } from "react-router-hash-link";
 
 const Nav = () => {
-    return (
+  return (
+    <>
+      <NavHashLink
+        to="/"
+        activeClassName="selected"
+        activeStyle={{ color: "red" }}
+      >
+        Start
+      </NavHashLink>
 
-    <ul style={{display: 'flex', listStyle: 'none', justifyContent: 'space-around'}}>
-    <li><Link activeClass="active" to="home" spy={true} smooth={true}>Start</Link></li>
-    <li><Link  to="about-project" spy={true} smooth={true}>O co chodzi?</Link></li>
-    <li><Link  to="about-us" spy={true} smooth={true}>O nas</Link></li>
-    <li><Link  to="organization" spy={true} smooth={true}>Fundacja i organizacje</Link></li>
-    <li><Link  to="contact" spy={true} smooth={true}>Kontakt</Link></li>
-      </ul>
-      )
-}
+      <NavHashLink to="/#about-project">O co chodzi?</NavHashLink>
 
-export default Nav
+      <NavHashLink to="/#about-us">O nas</NavHashLink>
+
+      <NavHashLink to="/#organization">Fundacja i organizacje</NavHashLink>
+
+      <NavHashLink to="/#contact">Kontakt</NavHashLink>
+
+      {/* <ul style={{display: 'flex', listStyle: 'none', justifyContent: 'space-around'}}>
+    <li><Link2 to='/' spy={true} smooth={true}>Start</Link2></li>
+    <li><Link1  to="about-project" spy={true} smooth={true}>O co chodzi?</Link1></li>
+    <li><Link1  to="about-us" spy={true} smooth={true}>O nas</Link1></li>
+    <li><Link1  to="organization" spy={true} smooth={true}>Fundacja i organizacje</Link1></li>
+    <li><Link1  to="contact" spy={true} smooth={true}>Kontakt</Link1></li>
+      </ul> */}
+    </>
+  );
+};
+
+export default Nav;
