@@ -1,20 +1,43 @@
 import React from 'react';
+import "./../scss/Home.scss";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import decoration from './../assets/Decoration.svg';
+import AboutProject from './HomeAboutProject'
 
 const Home = () => {
-    return (
-        <>
+    return (<>
+        <div className="home">
+  <Container className="container">
   
-  <div>
-    <h1>Welcome to the Tornadoes Website!</h1>
-  </div>
-      <div id="home" style={{height: 500}}>
-      <h1>This is Home section</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+      <div id="home">
+      <Row className="home__inside">
+      <Col></Col>
+      <Col>
+      <Row className="justify-content-center">
+        <h1>Zacznij pomagać</h1>
+        </Row>
+        <Row className="justify-content-center">
+        <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+      </Row>
+      <Row className="justify-content-center"><img src={decoration} alt=""/></Row>
+      <Row className="justify-content-center">
+<button>ODDAJ RZECZY</button>
+<button>ZORGANIZUJ ZBIÓRKĘ</button>
+
+      </Row>
+      </Col>
+         </Row>
+      
+      </div>
+    </Container>
     </div>
-    <div id="about-project" style={{height: 500}}>
-    <h1>O co chodzi?</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
-    </div>
+    <div id="about-project">
+    <Container className="container">
+   <AboutProject/>
+      </Container>
+      </div>
     <div id="about-us" style={{height: 500}}>
     <h1>O nas</h1>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.

@@ -1,0 +1,20 @@
+
+.home {
+    background-image: url("../assets/Home-Hero-Image.jpg");
+    background-position: center;
+
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-size: 1593px;
+    background-position: -577px;
+}
+
+.container{
+    max-width:82vw;
+}
+
+.home__inside {
+    height: 80vh;
+    justify-content: center;
+    place-items: center;
+}
