@@ -6,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 const Nav = () => {
   return (
     <>
-      <NavHashLink
+      <NavHashLink className="p-2"
         to="/"
         activeClassName="selected"
         activeStyle={{ color: "red" }}
@@ -14,13 +14,13 @@ const Nav = () => {
         Start
       </NavHashLink>
 
-      <NavHashLink to="/#about-project">O co chodzi?</NavHashLink>
+      <NavHashLink className="p-2" to="/#about-project">O co chodzi?</NavHashLink>
 
-      <NavHashLink to="/#about-us">O nas</NavHashLink>
+      <NavHashLink className="p-2" to="/#about-us">O nas</NavHashLink>
 
-      <NavHashLink to="/#organization">Fundacja i organizacje</NavHashLink>
+      <NavHashLink className="p-2" to="/#organization">Fundacja i organizacje</NavHashLink>
 
-      <NavHashLink to="/#contact">Kontakt</NavHashLink>
+      <NavHashLink className="p-2" to="/#contact">Kontakt</NavHashLink>
 
       {/* <ul style={{display: 'flex', listStyle: 'none', justifyContent: 'space-around'}}>
     <li><Link2 to='/' spy={true} smooth={true}>Start</Link2></li>
