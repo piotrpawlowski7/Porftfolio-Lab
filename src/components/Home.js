@@ -21,10 +21,10 @@ const Home = () => {
         <Row className="justify-content-center">
         <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
       </Row>
-      <Row className="justify-content-center"><img src={decoration} alt=""/></Row>
-      <Row className="justify-content-center">
-<button>ODDAJ RZECZY</button>
-<button>ZORGANIZUJ ZBIÓRKĘ</button>
+      <Row className="justify-content-center decoration"><img src={decoration} alt=""/></Row>
+      <Row className="home__buttons">
+<a href="#"><button>ODDAJ<br/>RZECZY</button></a>
+<a href="#"><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></a>
 
       </Row>
       </Col>

@@ -6,10 +6,10 @@ const NavPages = () => (
 <nav>
       <ul className="d-flex flex-row">
         <li className="p-2">
-          <Link to="/login">Zaloguj</Link>
+          <Link to="/login"className="nav__pages nav--pages">Zaloguj</Link>
         </li>
         <li className="p-2">
-          <Link to="/register">Załóż konto</Link>
+          <Link to="/register" className="nav__pages nav--pages">Załóż konto</Link>
         </li>
       </ul>
     </nav>
