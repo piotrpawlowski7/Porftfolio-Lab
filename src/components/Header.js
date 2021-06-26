@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
+import Nav from "./NavScroll";
 import Row from 'react-bootstrap/Row';
 import NavPages from "./NavPages";
 import "./../scss/Header.scss";

@@ -4,7 +4,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import decoration from './../assets/Decoration.svg';
-import AboutProject from './HomeAboutProject'
+import HomeAboutProject from './Home/HomeAboutProject'
+import HomeAboutUs from "./Home/HomeAboutUs"
+import HomeOrganization from './Home/HomeOrganization';
+import HomeContact from "./Home/HomeContact";
+import HomeThreeColumns from "./Home/HomeThreeColumns";
 
 const Home = () => {
     return (<>
@@ -23,8 +27,8 @@ const Home = () => {
       </Row>
       <Row className="justify-content-center decoration"><img src={decoration} alt=""/></Row>
       <Row className="home__buttons">
-<a href="#"><button>ODDAJ<br/>RZECZY</button></a>
-<a href="#"><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></a>
+        <a href="#"><button>ODDAJ<br/>RZECZY</button></a>
+        <a href="#"><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></a>
 
       </Row>
       </Col>
@@ -33,23 +37,25 @@ const Home = () => {
       </div>
     </Container>
     </div>
+ 
+   <HomeThreeColumns/>
+
     <div id="about-project">
-    <Container className="container">
-   <AboutProject/>
-      </Container>
+   <HomeAboutProject/>
       </div>
-    <div id="about-us" style={{height: 500}}>
-    <h1>O nas</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+    <div id="about-us">
+   <HomeAboutUs/>
     </div>
-    <div id="organization" style={{height: 500}}>
-    <h1>Fundacja i organizacje</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+    <div id="organization">
+    <Container className="container">
+    <HomeOrganization/>
+    </Container>
     </div>
-    <div id="contact" style={{height: 500}}>
-    <h1>Kontakt</h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
-    </div>
+    <div id="contact">
+    <Container className="container">
+      <HomeContact/>
+      </Container>
+     </div>
     </>
     );
     }
