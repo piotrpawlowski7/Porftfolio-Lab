@@ -1,3 +1,5 @@
+@import "./fonts";
+
 header {
 }
 
@@ -5,3 +7,53 @@ header {
     margin-top:50px;
     max-width:82vw;
 }
+
+nav li .nav__pages {
+    margin:5px;
+}
+
+nav li {
+    margin: 20px;
+
+    & .nav--pages {
+        color:black;
+    }
+}
+nav li:nth-of-type(2){
+    border: 1.4px solid rgb(248, 210, 39);
+}
+
+ul li {
+    font-family:$font-base;
+    font-size:1.0rem;
+    color:black;
+
+    &a {
+        color:black;
+        &:hover {
+            color:black;
+        }
+    }
+}
+
+header .NavHome {
+    font-size:1.7rem;
+    font-family:$font-base;
+}
+.nav--home {
+    padding:10px 20px;
+    color:black;
+    
+    
+    }
+
+    .NavHome .selected {
+
+color: black!important;
+border:1.4px solid black;
+    }
+
+   .NavHome a:hover {
+        color:black;
+        
+    }
