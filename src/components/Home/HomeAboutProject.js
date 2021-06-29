@@ -7,6 +7,7 @@ import icon1 from "./../../assets/Icon-1.svg";
 import icon2 from "./../../assets/Icon-2.svg";
 import icon3 from "./../../assets/Icon-3.svg";
 import icon4 from "./../../assets/Icon-4.svg";
+import { Link } from "react-router-dom";
 
 const HomeAboutProject = () => (
   <>
@@ -27,7 +28,6 @@ const HomeAboutProject = () => (
                   <img src={icon1}></img>
                 </icon>
                 <h4>Wybierz rzeczy</h4>
-                <hr/>
                 <p>ubrania, zabawki, sprzęt i inne</p>
               </Col>
               <Col className="AboutProject__box">
@@ -35,7 +35,7 @@ const HomeAboutProject = () => (
                   <img src={icon2}></img>
                 </icon>
                 <h4>Spakuj je</h4>
-                <hr/>
+               
                 <p>skorzystaj z worków na śmieci</p>
               </Col>
               <Col className="AboutProject__box">
@@ -43,7 +43,7 @@ const HomeAboutProject = () => (
                   <img src={icon3}></img>
                 </icon>
                 <h4>Zdecyduj komu chcesz pomóc</h4>
-                <hr/>
+              
                 <p>wybierz zaufane miejsce</p>
               </Col>
               <Col className="AboutProject__box">
@@ -51,7 +51,7 @@ const HomeAboutProject = () => (
                   <img src={icon4}></img>
                 </icon>
                 <h4>Zamów kuriera</h4>
-                <hr/>
+               
                 <p>kurier przyjedzie w dogodnym terminie</p>
               </Col>
             </div>
@@ -60,7 +60,7 @@ const HomeAboutProject = () => (
       </div>
     
     <Row className="AboutProject__buttons">
-        <a href="#"><button>ODDAJ<br/>RZECZY</button></a>
+    <Link to="/login" className=""><button>ODDAJ<br/>RZECZY</button></Link>
 
       </Row>
       </Container>
