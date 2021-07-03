@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "./../scss/Home.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -27,8 +28,8 @@ const Home = () => {
       </Row>
       <Row className="justify-content-center decoration"><img src={decoration} alt=""/></Row>
       <Row className="home__buttons">
-        <a href="#"><button>ODDAJ<br/>RZECZY</button></a>
-        <a href="#"><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></a>
+      <Link to="/login"className=""><button>ODDAJ<br/>RZECZY</button></Link>
+      <Link to="/login"className=""><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></Link>
 
       </Row>
       </Col>
@@ -52,9 +53,8 @@ const Home = () => {
     </Container>
     </div>
     <div id="contact">
-    <Container className="container">
+
       <HomeContact/>
-      </Container>
      </div>
     </>
     );

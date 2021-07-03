@@ -117,6 +117,24 @@ margin-bottom:1rem;
 
         .container {
             max-width: 100vw;
+            // padding-right: 0px!important;
+            // padding-left: 0px!important;
+        }
+        p {
+    position: relative;
+    
+    margin-top: 12px;
+
+}
+        P::before {
+            
+            content:"";
+            border-bottom:1px solid #111;
+            position: absolute;
+            top:-110%;
+            left: 32%;
+            height: 100%;
+            width: 50px;
         }
         
 
@@ -140,7 +158,6 @@ margin-bottom:1rem;
 }
 
         &__FourColumns {
-        
 
         
             icon img {
@@ -194,6 +211,7 @@ margin-bottom:1rem;
                 }
             }
         }
+        
 
         &__buttons {
             justify-content: space-around;
@@ -296,11 +314,18 @@ text-align:center;
 
 
 .Footer {
-    margin-bottom:20px;
-margin-top:20px;
 
+    display: flex; 
+
+    &__content {
+    position:absolute;
+    z-index: 1;
+    margin-top:-50px;
+
+}
 & p {
     font-family: $font-base;
+    padding-bottom:00px;
 }
 }
 
@@ -319,4 +344,153 @@ margin-top:20px;
         font-family: $font-base;
         font-size: 40px;
     }
+}
+
+.Organization {
+    margin-bottom:200px;
+
+    &__description {
+        margin-top:60px;
+        margin-bottom:60px;
+        max-width:640px;
+
+        p {
+            font-size:22px;
+            font-family: $font-base;
+        }
+    }
+
+    &__slider {
+        max-width: 1344px;
+    }
+    
+
+    &__single {
+&_container {
+    padding-bottom:30px;
+    border-bottom:1px solid black;
+    margin-bottom:30px;
+    width:100%;
+
+}
+        &_main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: space-between;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &_title {
+            font-size:26px;
+            font-family: $font-base;
+        }
+        &_description {}
+        &_tags {
+            display:flex;
+            li {
+                margin-right:8px;
+
+               }   li::after {
+                    content:",";
+                    position:absolute;
+
+                }
+                li:last-child:after
+                {
+                  content: '';
+                }
+            
+        }
+    }
+
+    &__buttons {
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            margin:20px;
+            
+
+            button {
+                font-size:26px;
+              
+            
+                font-family:$font-base;
+                font-weight:100;
+                padding:20px;
+            display:grid;
+            place-items:center;
+            margin:0 50px 0 50px;
+              
+                
+             }
+
+             button.active {
+                border:1px solid black;
+             }
+        }
+
+        &__pages {
+            margin-top:40px;
+            margin-bottom:30px;
+
+            &__numbers {
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    padding:10px;
+                    cursor:pointer;
+                    margin:10px;
+                }
+
+                li.active {
+                    border:1px solid black;
+                }
+            }
+        }
+}
+
+
+#contact {
+    background-image: url("../assets/Background-Contact-Form.jpg");
+    background-position: center;
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    z-index:1;
+    position:relative;
+}
+    #contact::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,.8);
+        z-index: -1;
+    }
+
+
+.Contact {   
+  
+  
+
+    &__form {} 
+    &__container {
+        
+    }
+}
+
+.Contact .container {
+    max-width:82vw;
+}
+
+.contact__inside {
+    height: 80vh;
+    justify-content: center;
+    place-items: center;
 }
