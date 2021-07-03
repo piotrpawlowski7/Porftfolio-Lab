@@ -53,9 +53,8 @@ const Home = () => {
     </Container>
     </div>
     <div id="contact">
-    <Container className="container">
+
       <HomeContact/>
-      </Container>
      </div>
     </>
     );

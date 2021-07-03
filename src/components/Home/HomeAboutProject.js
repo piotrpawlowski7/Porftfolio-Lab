@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 const HomeAboutProject = () => (
   <>
     <div class="AboutProject">
+     
       <Container fuid>
       <Row className="justify-content-center">
         <h1 className="AboutProject__title">Wystarczą 4 proste kroki</h1>
@@ -19,7 +20,9 @@ const HomeAboutProject = () => (
       <Row className="justify-content-center AboutProject__decoration">
         <img src={decoration} alt="" />
       </Row>
+      </Container>
       <div className="section--gray">
+
         <div className="AboutProject__row">
           <div className="AboutProject__FourColumns">
             <div className="AboutProject__FourColumns__inside">
@@ -58,7 +61,7 @@ const HomeAboutProject = () => (
           </div>
         </div>
       </div>
-    
+      <Container fuid>
     <Row className="AboutProject__buttons">
     <Link to="/login" className=""><button>ODDAJ<br/>RZECZY</button></Link>
 

@@ -6,7 +6,8 @@ const Footer = () => {
         <>
         <div className="Footer">
         <Container fluid>
-            <Row className="justify-content-center"><p>Copyright by Coders Lab</p></Row>
+            <Row className="justify-content-center">
+                <div className="Footer__content"><p>Copyright by Coders Lab</p></div></Row>
         </Container>
         </div>
         </>
