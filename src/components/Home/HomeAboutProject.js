@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const HomeAboutProject = () => (
   <>
-    <div class="AboutProject">
+    <div className="AboutProject">
      
       <Container fuid>
       <Row className="justify-content-center">
