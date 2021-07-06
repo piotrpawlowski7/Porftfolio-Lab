@@ -2,6 +2,7 @@ import React from "react";
 // import { Link as Link1 } from 'react-scroll';
 // import { Link as Link2 } from 'react-router-dom';
 import { NavHashLink } from "react-router-hash-link";
+import "./../scss/NavHome.scss";
 
 const Nav = () => {
   return (

@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import decoration from "./../../assets/Decoration.svg";
+import "./../../scss/HomeOrganization.scss"
 
 const HomeOrganization = () => {
   const [ins, setIns] = useState([]);
