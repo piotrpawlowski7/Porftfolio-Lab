@@ -8,6 +8,7 @@ import icon2 from "./../../assets/Icon-2.svg";
 import icon3 from "./../../assets/Icon-3.svg";
 import icon4 from "./../../assets/Icon-4.svg";
 import { Link } from "react-router-dom";
+import "./../../scss/HomeThreeColumns.scss"
 
 const HomeAboutProject = () => (
   <>
@@ -63,7 +64,7 @@ const HomeAboutProject = () => (
       </div>
       <Container fuid>
     <Row className="AboutProject__buttons">
-    <Link to="/login" className=""><button>ODDAJ<br/>RZECZY</button></Link>
+    <Link to="/logowanie" className=""><button>ODDAJ<br/>RZECZY</button></Link>
 
       </Row>
       </Container>

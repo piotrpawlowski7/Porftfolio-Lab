@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import decoration from "./../assets/Decoration.svg";
@@ -11,6 +11,8 @@ import firebase from "firebase/app"
 import "firebase/auth";
 
 
+
+
 const Login = () => {
   const {logout} = useAuth()
   const emailRef = useRef()
@@ -19,40 +21,54 @@ const Login = () => {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+  
+  const [LoggedIn, setLoggedIn]=useState(false);
 
   const user = firebase.auth().currentUser;
+  
 if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
   const displayName = user.displayName;
   const email = user.email;
   const photoURL = user.photoURL;
   const emailVerified = user.emailVerified;
 
-  // The user's ID, unique to the Firebase project. Do NOT use
-  // this value to authenticate with your backend server, if
-  // you have one. Use User.getToken() instead.
   const uid = user.uid;
   console.log("email: "+email);
   console.log("Current user: "+firebase.auth().currentUser.email)
 }
 
 if (user == null) {
+  
   console.log("użytkownik niezalogowany")
 }
 
-  // firebase.auth().onAuthStateChanged(function(user) {
-  //   if (user) {
-  //    console.log("zalogowany")
-     
-  //   } else {
-  //    console.log("nie zalogowany")
-  //   }
-  // });
+
+useEffect(() => {
+  function displayLogged() {
+    if (user !== null) {
+      setLoggedIn(true);
+    }
+   
+  }
+  
+  const listener = event => {
+    if (event.code === "Enter" || event.code === "NumpadEnter") { 
+      event.preventDefault();
+      handleSubmit()
+    }
+  };
+  document.addEventListener("keydown", listener);
+  return () => {
+    document.removeEventListener("keydown", listener);
+  };
+}, []);
+
+
   const handleLogout = () => {
     try {
     logout();
      console.log('Wylogowano użytkownika:'+firebase.auth().currentUser.email);
-     console.log('Status: ');
+     console.log('Status: '+user);
     } catch (err) {
      console.log('err:', err);
     }
@@ -60,7 +76,7 @@ if (user == null) {
 
 
   async function handleSubmit(e) {
-    e.preventDefault()
+ 
 
     if (!/\S+@\S+\.\S+/.test(emailRef.current.value)) {
       return setError('Podany email jest nieprawidłowy!')
@@ -73,6 +89,7 @@ if (user == null) {
     try {
       setError("")
       setLoading(true)
+      setLoggedIn(true)
       await login(emailRef.current.value, passwordRef.current.value)
       history.push("/")
     } catch {
@@ -81,6 +98,7 @@ if (user == null) {
 
     setLoading(false)
   }
+
 
   return (<>
   <div className="Login">
@@ -94,27 +112,32 @@ if (user == null) {
 
   <Row className="justify-content-center Login__text">
 
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
+  {error && <p className="error">{error}</p>}
+          <Form onSubmit={handleSubmit} className="Login__container">
+            <div className="Login__inputs">
             <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>Adres e-mail</Form.Label>
               <Form.Control type="email" ref={emailRef} required />
             </Form.Group>
             <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Hasło</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Row className="buttons__container justify-content-center ">
-            <button className=""><Link  onClick={handleLogout} to="/wylogowano">Wyloguj się</Link>
-      </button>
-            <button className=""><Link to="/rejestracja">Załóż konto</Link>
-        {error && <p>{error.message}</p>}
-      </button>
-            <button disabled={loading} className="" type="submit">
+            </div>
+           
+            <Row className="buttons__container justify-content-center">
+    {user !== null &&        
+            <Link  onClick={handleLogout} to="/wylogowano"><button className="">Wyloguj się   </button></Link>
+   }
+  {user == null &&   <Link to="/rejestracja">         <button className="">Załóż konto     </button>  {error && <p>{error.message}</p>}</Link>
+}
+ 
+           <Link> <button disabled={loading} className="" type="submit">
               Zaloguj się
-            </button>
+            </button></Link>
             </Row>
           </Form>
+          
           {/* <div className="w-100 text-center mt-3">
             <Link to="/forgot-password">Forgot Password?</Link>
           </div> */}

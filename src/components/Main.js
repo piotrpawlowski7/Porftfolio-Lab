@@ -3,6 +3,8 @@ import Home from './Home'
 import Login from './Login';
 import Signup from './Signup';
 import Logout from './Logout';
+import PrivateRoute from "./PrivateRoute";
+import Dashboard from "./Dashboard";
 
 import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -21,6 +23,7 @@ const Main = () => (
       <Route path='/logowanie' component={Login}/>
       <Route path='/rejestracja' component={Signup}/>
       <Route path='/wylogowano' component={Logout}/>
+      <PrivateRoute exact path="/dashboard" component={Dashboard} />
     </Switch>
     </AuthProvider>
   </main>

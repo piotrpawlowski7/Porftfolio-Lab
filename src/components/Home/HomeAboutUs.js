@@ -4,6 +4,7 @@ import signature from "./../../assets/Signature.svg";
 import people from "./../../assets/People.jpg";
 import decoration from "./../../assets/Decoration.svg";
 import Container from "react-bootstrap/Container";
+import "./../../scss/HomeAboutUs.scss"
 
 const HomeAboutUs = () => {
   return (

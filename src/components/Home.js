@@ -29,8 +29,8 @@ const Home = () => {
       </Row>
       <Row className="justify-content-center decoration"><img src={decoration} alt=""/></Row>
       <Row className="home__buttons">
-      <Link to="/login"className=""><button>ODDAJ<br/>RZECZY</button></Link>
-      <Link to="/login"className=""><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></Link>
+      <Link to="/logowanie"className=""><button>ODDAJ<br/>RZECZY</button></Link>
+      <Link to="/logowanie"className=""><button>ZORGANIZUJ<br/>ZBIÓRKĘ</button></Link>
 
       </Row>
       </Col>

@@ -1,0 +1,18 @@
+@import "./fonts";
+
+.Footer {
+
+    display: flex; 
+
+    &__content {
+    position:absolute;
+    z-index: 1;
+    margin-top:-50px;
+
+}
+& p {
+    font-family: $font-base;
+    padding-bottom:00px;
+}
+}
+
