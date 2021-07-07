@@ -78,6 +78,7 @@ const Signup = () => {
           <Row className="justify-content-center Signup__text">
             {error && <p className="error">{error}</p>}
             <Form onSubmit={handleSubmit}>
+            <div className="Signup__inputs">
               <Form.Group id="email">
                 <Form.Label>Adres e-mail</Form.Label>
                 <Form.Control type="email" ref={emailRef} required />
@@ -94,7 +95,7 @@ const Signup = () => {
                   required
                 />
               </Form.Group>
-              
+              </div>
               <Row className="buttons__container justify-content-center ">
                 <Link to="/logowanie">
                   <button className="">Zaloguj się</button>

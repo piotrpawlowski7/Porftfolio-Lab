@@ -3,6 +3,23 @@
 .Signup {
     margin-bottom:150px;
 
+    &__inputs {
+        max-width:350px;
+        padding: 34px;
+        margin: 19px;
+        background: #f2f2f2;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 0px;
+
+    }
+
     &__text {
         flex-direction: column;
         align-content: center;

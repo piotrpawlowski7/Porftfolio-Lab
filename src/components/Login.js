@@ -91,7 +91,7 @@ useEffect(() => {
       setLoading(true)
       setLoggedIn(true)
       await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
+      history.push("/dashboard")
     } catch {
       setError("Failed to log in")
     }
@@ -126,11 +126,14 @@ useEffect(() => {
             </div>
            
             <Row className="buttons__container justify-content-center">
-    {user !== null &&        
-            <Link  onClick={handleLogout} to="/wylogowano"><button className="">Wyloguj się   </button></Link>
-   }
-  {user == null &&   <Link to="/rejestracja">         <button className="">Załóż konto     </button>  {error && <p>{error.message}</p>}</Link>
-}
+               {user !== null &&        
+               <Link  onClick={handleLogout} to="/wylogowano"><button className="">Wyloguj się
+                  </button></Link>
+               }
+              {user == null &&   
+              <Link to="/rejestracja">  <button className="">Załóż konto
+              </button>  {error && <p>{error.message}</p>}</Link>
+              }
  
            <Link> <button disabled={loading} className="" type="submit">
               Zaloguj się
@@ -143,8 +146,6 @@ useEffect(() => {
           </div> */}
     
      
-
-
   </Row>
 </Container>
   </div>
